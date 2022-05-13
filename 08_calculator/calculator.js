@@ -20,20 +20,31 @@ const sum = function([...arg]) {
   return total;
 };
 
-const multiply = function(num1, ...arg) {
-  let total = num1;
-  for (let i = 0; i < arg.length; i ++) {
+const multiply = function([...arg]) {
+  let total = 1;
+  for (let i = 0; i < arg.length; i++) {
     total *= arg[i];
   }
   return total;
 };
 
-const power = function() {
-	
+const power = function(num, pow) {
+  let total;
+  total = num ** pow;
+  return total;	
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+	let total = 1;
+
+  if (num === 1 || num === 0) {
+    return total;
+  } else {
+    for (let i = num; i >= 1; i--) {
+      total = total * i;
+    }
+    return total;
+  }
 };
 
 // Do not edit below this line
